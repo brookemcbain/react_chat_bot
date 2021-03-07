@@ -9,6 +9,13 @@ class ActionProvider {
     const message = this.createChatbotMessage("Hello, I'm the chatbot");
     this.setChatbotMessage(message);
   };
+
+  todosHandler = () => {
+    const message = this.createChatBotMessage("Sure, here's your todos!", {
+      widget: 'todos',
+    }) (property) ActionProvider.setChatbotMessage: (message: any) => void
+    this.setChatbotMessage(message)
+  };
   setChatbotMessage = (message) => {
     this.setState((state) => ({
       ...state,
